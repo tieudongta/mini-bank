@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background: #0d1117;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+  main.container {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.flash {
+  animation: pop 0.3s ease-in-out;
+  background-color: #d1fae5;
+}
+
+/* ======= Dark Mode Styles ======= */
+
+.dark body {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+.dark header, .dark footer {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+.dark main.container {
+  /* Optional: slightly lighter background */
+  /* background: #1e293b; */
+}
+
+.dark section {
+  background: #1e293b;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+  color: #e0e0e0;
+}
+
+.dark button {
+  background: #3b82f6; /* lighter blue */
+  color: #f9fafb;
+}
+
+.dark button:hover {
+  background: #2563eb;
+}
+
+.dark .flash {
+  background-color: #064e3b; /* darker greenish for flash */
+  color: #d1fae5;
+}
